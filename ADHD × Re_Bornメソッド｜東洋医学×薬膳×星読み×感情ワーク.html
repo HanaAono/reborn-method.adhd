@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/user/Downloads/adhd_reborn_tool_1.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADHD × Re:Bornメソッド｜東洋医学×薬膳×星読み×感情ワーク</title>
+<link href="./ADHD × Re_Bornメソッド｜東洋医学×薬膳×星読み×感情ワーク_files/css2" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e0c0a;
+  --gold:#b8924a;
+  --gold2:#d4aa6a;
+  --gold3:#e8c87a;
+  --cream:#f5f0eb;
+  --paper:#faf7f4;
+  --veil:rgba(184,146,74,.2);
+  --wood:#4a7c59;
+  --fire:#c0392b;
+  --earth:#c97d2a;
+  --metal:#7a8fa6;
+  --water:#2c5f8a;
+  --serif:'Shippori Mincho',serif;
+  --latin:'Cormorant Garamond',serif;
+  --body:'Noto Serif JP',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0e0c0a;color:#f0e8de;font-family:var(--body);overflow-x:hidden;min-height:100vh}
+
+/* ── NOISE ── */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.5}
+
+/* ── LAYOUT ── */
+.page{position:relative;z-index:1}
+.container{max-width:980px;margin:0 auto;padding:0 1.5rem}
+
+/* ── HERO ── */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:3rem 1.5rem;
+  background:radial-gradient(ellipse 70% 60% at 50% 40%,#1e1810 0%,transparent 70%);
+  position:relative;
+}
+.hero-ornament{
+  position:absolute;width:500px;height:500px;border-radius:50%;
+  border:1px solid rgba(184,146,74,.12);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  animation:breathe 7s ease-in-out infinite;
+  pointer-events:none;
+}
+.hero-ornament::before{content:'';position:absolute;inset:36px;border-radius:50%;border:1px solid rgba(184,146,74,.07)}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.02)}}
+.hero-eyebrow{font-family:var(--latin);font-style:italic;font-size:.8rem;letter-spacing:.35em;color:var(--gold);margin-bottom:2rem;opacity:.8}
+.hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.8rem);line-height:1.2;letter-spacing:.04em;margin-bottom:1rem}
+.hero-title .accent{color:var(--gold2)}
+.hero-sub{font-family:var(--latin);font-style:italic;font-size:clamp(.95rem,2vw,1.3rem);color:rgba(240,232,222,.4);letter-spacing:.1em;margin-bottom:2.5rem}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:3rem}
+.hero-tag{font-size:.72rem;letter-spacing:.15em;border:1px solid var(--veil);color:var(--gold2);padding:.28rem .8rem;font-family:var(--serif)}
+.hero-cta-btn{
+  font-family:var(--serif);font-size:.88rem;letter-spacing:.2em;
+  padding:.9rem 2.8rem;
+  border:1px solid var(--gold);color:var(--gold2);
+  background:transparent;cursor:pointer;
+  transition:all .4s;position:relative;overflow:hidden;
+}
+.hero-cta-btn::before{content:'';position:absolute;inset:0;background:var(--gold);transform:translateX(-101%);transition:transform .4s cubic-bezier(.77,0,.18,1)}
+.hero-cta-btn:hover::before{transform:translateX(0)}
+.hero-cta-btn:hover{color:#0e0c0a}
+.hero-cta-btn span{position:relative;z-index:1}
+
+/* ── SECTION BASE ── */
+.section{padding:6rem 0}
+.section.dark{background:#0e0c0a}
+.section.mid{background:#111009}
+.section.light-dark{background:#141210}
+.sec-label{font-family:var(--latin);font-style:italic;font-size:.72rem;letter-spacing:.32em;color:var(--gold);margin-bottom:.8rem;text-transform:uppercase}
+.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.5vw,2.4rem);line-height:1.3;letter-spacing:.05em;margin-bottom:1rem}
+.sec-lead{font-size:.92rem;color:rgba(240,232,222,.5);line-height:2;font-weight:300;max-width:640px}
+.divider{width:1px;height:56px;background:linear-gradient(to bottom,transparent,rgba(184,146,74,.4),transparent);margin:3rem auto}
+
+/* ── INTRO CARDS ── */
+.intro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:3rem}
+.intro-card{border:1px solid var(--veil);padding:1.6rem;position:relative;overflow:hidden;transition:border-color .3s}
+.intro-card:hover{border-color:rgba(184,146,74,.45)}
+.intro-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);transform:scaleY(0);transform-origin:bottom;transition:transform .4s}
+.intro-card:hover::before{transform:scaleY(1)}
+.intro-card-icon{font-size:1.6rem;margin-bottom:.8rem}
+.intro-card-title{font-family:var(--serif);font-size:.95rem;font-weight:500;color:var(--gold2);margin-bottom:.5rem;letter-spacing:.05em}
+.intro-card-body{font-size:.8rem;color:rgba(240,232,222,.5);line-height:1.85;font-weight:300}
+
+/* ── DIAGNOSTIC SHEET ── */
+.diagnostic{padding:6rem 0}
+.element-block{margin-bottom:3rem;border:1px solid rgba(255,255,255,.06);padding:2rem}
+.element-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.6rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.element-kanji{font-family:var(--serif);font-size:2.2rem;font-weight:600;line-height:1}
+.element-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.element-info h3{font-family:var(--serif);font-size:1rem;font-weight:500;letter-spacing:.06em;margin-bottom:.2rem}
+.element-info p{font-size:.75rem;color:rgba(240,232,222,.4);font-family:var(--latin);font-style:italic}
+.questions{display:flex;flex-direction:column;gap:.7rem}
+.q-item{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:.9rem 1rem;cursor:pointer;
+  border:1px solid rgba(255,255,255,.04);
+  transition:all .25s;user-select:none;
+}
+.q-item:hover{border-color:var(--veil);background:rgba(255,255,255,.02)}
+.q-item.checked{border-color:rgba(184,146,74,.4);background:rgba(184,146,74,.06)}
+.q-check{
+  width:18px;height:18px;border:1px solid rgba(184,146,74,.4);
+  flex-shrink:0;margin-top:.1rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .25s;
+}
+.q-item.checked .q-check{background:var(--gold);border-color:var(--gold)}
+.q-check-inner{width:8px;height:8px;background:#0e0c0a;opacity:0;transition:opacity .2s}
+.q-item.checked .q-check-inner{opacity:1}
+.q-text{font-size:.87rem;color:rgba(240,232,222,.7);line-height:1.75;font-weight:300}
+.element-score{
+  margin-top:1.2rem;display:flex;align-items:center;gap:.8rem;
+}
+.score-bar-wrap{flex:1;height:4px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.score-bar{height:100%;border-radius:2px;transition:width .6s cubic-bezier(.16,1,.3,1)}
+.score-num{font-family:var(--latin);font-size:.85rem;color:var(--gold);min-width:32px;text-align:right}
+
+/* ── RESULT ── */
+.result-section{display:none;padding:6rem 0}
+.result-section.visible{display:block}
+.radar-wrap{display:flex;justify-content:center;margin:3rem 0}
+canvas#radarChart{max-width:360px;width:100%}
+.result-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-top:2.5rem}
+.result-card{border:1px solid var(--veil);padding:1.8rem;position:relative}
+.result-card.primary{border-color:rgba(184,146,74,.5)}
+.result-card-badge{
+  position:absolute;top:-1px;right:1.2rem;
+  font-family:var(--latin);font-style:italic;font-size:.7rem;letter-spacing:.18em;
+  color:var(--gold);background:#0e0c0a;padding:0 .5rem;
+}
+.result-card-element{font-size:.72rem;letter-spacing:.2em;color:rgba(240,232,222,.35);margin-bottom:.5rem;font-family:var(--latin)}
+.result-card-title{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--gold2);margin-bottom:.6rem}
+.result-card-body{font-size:.83rem;color:rgba(240,232,222,.55);line-height:1.9;font-weight:300}
+
+/* ── ENERGY MAP ── */
+.energy-map{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin:3rem 0}
+.energy-col{text-align:center}
+.energy-label{font-family:var(--serif);font-size:.9rem;font-weight:500;margin-bottom:.5rem}
+.energy-organ{font-size:.68rem;color:rgba(240,232,222,.35);margin-bottom:.9rem;font-family:var(--latin);font-style:italic}
+.energy-bar-container{height:120px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:.3rem;position:relative}
+.energy-bar-bg{position:absolute;bottom:0;width:24px;height:100%;background:rgba(255,255,255,.05);border-radius:12px}
+.energy-bar-fill{position:absolute;bottom:0;width:24px;border-radius:12px;transition:height .8s cubic-bezier(.16,1,.3,1)}
+.energy-status{font-size:.68rem;margin-top:.6rem;font-family:var(--latin);font-style:italic;letter-spacing:.1em}
+.energy-status.excess{color:#e85d5d}
+.energy-status.deficient{color:#6db3f2}
+.energy-status.balanced{color:var(--gold)}
+
+/* ── FLOWCHART ── */
+.flowchart-wrap{margin:3rem 0;overflow-x:auto;padding-bottom:1rem}
+.flow-svg{min-width:700px;width:100%}
+
+/* ── FOOD RX ── */
+.rx-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.rx-tab{
+  font-family:var(--serif);font-size:.78rem;letter-spacing:.1em;
+  padding:.4rem 1rem;border:1px solid rgba(255,255,255,.1);
+  color:rgba(240,232,222,.45);cursor:pointer;transition:all .25s;
+  background:none;
+}
+.rx-tab.active,.rx-tab:hover{border-color:var(--gold);color:var(--gold2);background:rgba(184,146,74,.06)}
+.rx-panel{display:none}
+.rx-panel.active{display:block}
+.rx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.rx-card{border:1px solid var(--veil);padding:1.5rem;transition:border-color .3s}
+.rx-card:hover{border-color:rgba(184,146,74,.45)}
+.rx-head{display:flex;gap:.6rem;align-items:center;margin-bottom:.8rem;flex-wrap:wrap}
+.rx-badge{font-family:var(--latin);font-style:italic;font-size:.67rem;letter-spacing:.15em;padding:.2rem .6rem;border:1px solid currentColor}
+.rx-card-title{font-family:var(--serif);font-size:.95rem;font-weight:500;color:#f0e8de;margin-bottom:.4rem}
+.rx-card-tcm{font-size:.75rem;color:rgba(240,232,222,.35);margin-bottom:.6rem;font-style:italic}
+.rx-card-body{font-size:.8rem;color:rgba(240,232,222,.5);line-height:1.85;font-weight:300;margin-bottom:.9rem}
+.rx-foods{display:flex;flex-wrap:wrap;gap:.35rem}
+.rx-food{font-size:.7rem;padding:.18rem .55rem;background:rgba(184,146,74,.1);border:1px solid rgba(184,146,74,.2);color:var(--gold2);font-family:var(--serif)}
+.rx-timing{font-size:.72rem;color:rgba(240,232,222,.3);margin-top:.7rem;font-style:italic;font-family:var(--latin)}
+
+/* ── ASTROLOGY ── */
+.astro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-top:2.5rem}
+.astro-card{border:1px solid rgba(255,255,255,.07);padding:1.8rem;transition:border-color .3s}
+.astro-card:hover{border-color:var(--veil)}
+.astro-planet{font-family:var(--latin);font-size:1.8rem;color:var(--gold);line-height:1;margin-bottom:.4rem}
+.astro-name{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--gold2);margin-bottom:.2rem}
+.astro-sub{font-size:.72rem;color:rgba(240,232,222,.3);font-family:var(--latin);font-style:italic;margin-bottom:.8rem;letter-spacing:.1em}
+.astro-body{font-size:.83rem;color:rgba(240,232,222,.5);line-height:1.9;font-weight:300}
+.astro-signs{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.8rem}
+.astro-sign{font-size:.7rem;padding:.18rem .55rem;border:1px solid rgba(184,146,74,.25);color:var(--gold2);font-family:var(--serif)}
+
+/* ── EMOTION WORK ── */
+.emotion-blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2.5rem}
+.emotion-block{border:1px solid rgba(255,255,255,.07);padding:2rem}
+.emotion-block-label{font-family:var(--latin);font-style:italic;font-size:.7rem;letter-spacing:.2em;color:var(--gold);margin-bottom:.5rem}
+.emotion-block-title{font-family:var(--serif);font-size:1.05rem;font-weight:500;color:#f0e8de;margin-bottom:.8rem}
+.emotion-block-body{font-size:.82rem;color:rgba(240,232,222,.5);line-height:1.9;font-weight:300}
+.emotion-steps{list-style:none;margin-top:.9rem;display:flex;flex-direction:column;gap:.5rem}
+.emotion-steps li{font-size:.8rem;color:rgba(240,232,222,.5);padding-left:1.2rem;position:relative;line-height:1.7;font-weight:300}
+.emotion-steps li::before{content:'—';position:absolute;left:0;color:var(--gold);font-family:var(--latin)}
+
+/* ── CTA ── */
+.cta-wrap{text-align:center;padding:6rem 2rem;background:radial-gradient(ellipse 60% 70% at 50% 50%,#1e1810 0%,transparent 70%)}
+.cta-title{font-family:var(--serif);font-size:clamp(1.4rem,3.5vw,2.2rem);line-height:1.5;letter-spacing:.05em;margin-bottom:1.2rem;font-weight:400}
+.cta-sub{font-size:.88rem;color:rgba(240,232,222,.4);line-height:1.9;margin-bottom:2.5rem;font-weight:300}
+.cta-btn{
+  display:inline-block;padding:1rem 3rem;
+  background:var(--gold);color:#0e0c0a;
+  font-family:var(--serif);font-size:.88rem;letter-spacing:.2em;
+  text-decoration:none;transition:opacity .3s,transform .3s;cursor:pointer;border:none;
+}
+.cta-btn:hover{opacity:.85;transform:translateY(-2px)}
+
+/* ── UTIL ── */
+.gold{color:var(--gold2)}
+.mt1{margin-top:1rem}.mt2{margin-top:2rem}.mt3{margin-top:3rem}
+.text-center{text-align:center}
+.ital{font-family:var(--latin);font-style:italic}
+
+/* ── NAV ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;
+  transition:background .4s;
+}
+.nav.scrolled{background:rgba(10,9,7,.9);backdrop-filter:blur(12px)}
+.nav-brand{font-family:var(--serif);font-size:.8rem;letter-spacing:.18em;color:rgba(240,232,222,.6)}
+.nav-brand span{color:var(--gold)}
+.nav-scroll{font-family:var(--latin);font-style:italic;font-size:.72rem;letter-spacing:.15em;color:rgba(184,146,74,.6)}
+
+/* ── MOBILE ── */
+@media(max-width:480px){
+  .energy-map{grid-template-columns:repeat(3,1fr);gap:.8rem}
+  .energy-map .energy-col:nth-child(4),.energy-map .energy-col:nth-child(5){
+    grid-column:span 1;
+  }
+  .hero-ornament{width:300px;height:300px}
+  .element-block{padding:1.4rem}
+  .intro-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="nav-brand">Re:<span>Born</span> × ADHD</div>
+  <span class="nav-scroll">東洋医学×薬膳×星読み×感情ワーク</span>
+</nav>
+
+<div class="page">
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-ornament"></div>
+  <p class="hero-eyebrow">Re:Born Method × Neurodivergent</p>
+  <h1 class="hero-title">
+    ADHDの根っこを<br>
+    <span class="accent">東洋医学</span>で読み解く
+  </h1>
+  <p class="hero-sub">食 · 五行 · 星 · 感情——4つの視点で、あなたの特性を整える</p>
+  <div class="hero-tags">
+    <span class="hero-tag">東洋医学 × 五行</span>
+    <span class="hero-tag">薬膳食処方</span>
+    <span class="hero-tag">医療占星術</span>
+    <span class="hero-tag">感情ワーク</span>
+  </div>
+  <button class="hero-cta-btn" onclick="document.getElementById(&#39;diagnostic&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">
+    <span>自己診断を始める</span>
+  </button>
+</section>
+
+<!-- ── INTRO ── -->
+<section class="section mid">
+  <div class="container">
+    <p class="sec-label">perspective</p>
+    <h2 class="sec-title">「欠陥」ではなく<br>エネルギーの<span class="gold">偏りのパターン</span></h2>
+    <p class="sec-lead">東洋医学では5000年前から、感情・身体・行動は五臓のエネルギーと切り離せないものと捉えてきました。ADHDの特性は、特定の臓腑のエネルギーが過剰になったり、不足したりすることで現れるパターンです。</p>
+    <div class="intro-grid mt3">
+      <div class="intro-card">
+        <div class="intro-card-icon">☯️</div>
+        <h3 class="intro-card-title">東洋医学 × 五行</h3>
+        <p class="intro-card-body">肝・心・脾・肺・腎の五臓とADHDの症状を照らし合わせます。衝動性は肝、注意散漫は心、思考の混乱は脾に深く関わります。</p>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-icon">🌿</div>
+        <h3 class="intro-card-title">薬膳食処方</h3>
+        <p class="intro-card-body">五臓のパターンに合わせた食材を日常に取り入れます。クルミで腎を補い、セロリで肝気を流し、なつめで心を養う。スーパーで買える食材が薬になります。</p>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-icon">⭐</div>
+        <h3 class="intro-card-title">医療占星術</h3>
+        <p class="intro-card-body">天王星・水星の位置がADHDの特性と深く関連します。あなたの星図を読むことで、「なぜこの特性が強いのか」の宇宙的な意味が見えてきます。</p>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-icon">🎡</div>
+        <h3 class="intro-card-title">感情ワーク</h3>
+        <p class="intro-card-body">ADHDの感情爆発は「本当の感情」ではなく、エネルギーの詰まりが引き金を引くことがほとんど。感情の輪で「根源の感情」と「今の感情」を仕分けます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── DIAGNOSTIC ── -->
+<section class="section dark" id="diagnostic">
+  <div class="container">
+    <p class="sec-label">self-diagnosis</p>
+    <h2 class="sec-title">五行<span class="gold">自己診断シート</span></h2>
+    <p class="sec-lead">当てはまるものをすべてチェックしてください。25問すべて答えると、あなたの五行パターンが見えてきます。</p>
+
+    <!-- 木 肝 -->
+    <div class="element-block mt3" id="block-wood">
+      <div class="element-header">
+        <div class="element-dot" style="background:var(--wood)"></div>
+        <span class="element-kanji" style="color:var(--wood)">木</span>
+        <div class="element-info">
+          <h3>肝のエネルギー｜衝動性・計画・怒り</h3>
+          <p>Liver Energy · Wood Element · Spring</p>
+        </div>
+      </div>
+      <ul class="questions" id="q-wood">
+        <li class="q-item" onclick="toggle(this,&#39;wood&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">些細なことで感情が爆発してしまい、後から深く後悔する</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;wood&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">計画を立てても実行できない。または衝動的に物事を決めてしまう</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;wood&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">目が疲れやすく、頭痛や肩こりが慢性的にある</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;wood&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">物事を先送りしてしまい、締め切り直前に爆発的に動く</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;wood&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">自分のルールやペースを乱されると強いストレスを感じる</p></li>
+      </ul>
+      <div class="element-score">
+        <span style="font-size:.72rem;color:rgba(240,232,222,.3);font-family:var(--latin);font-style:italic;min-width:20px">木</span>
+        <div class="score-bar-wrap"><div class="score-bar" id="bar-wood" style="background:var(--wood);width:0%"></div></div>
+        <span class="score-num" id="num-wood">0/5</span>
+      </div>
+    </div>
+
+    <!-- 火 心 -->
+    <div class="element-block" id="block-fire">
+      <div class="element-header">
+        <div class="element-dot" style="background:var(--fire)"></div>
+        <span class="element-kanji" style="color:var(--fire)">火</span>
+        <div class="element-info">
+          <h3>心のエネルギー｜注意力・感情の波・睡眠</h3>
+          <p>Heart Energy · Fire Element · Summer</p>
+        </div>
+      </div>
+      <ul class="questions" id="q-fire">
+        <li class="q-item" onclick="toggle(this,&#39;fire&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">集中しようとすればするほど、他のことが気になって止まらない</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;fire&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">感情の浮き沈みが激しく、些細な一言で一日が台無しになる</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;fire&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">眠れない夜が多い、または朝起きられず日中ぼーっとする</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;fire&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">人の話を最後まで聞けない、または話しすぎてしまう</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;fire&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">忘れ物・なくしものが多く、大切なものほど見つからない</p></li>
+      </ul>
+      <div class="element-score">
+        <span style="font-size:.72rem;color:rgba(240,232,222,.3);font-family:var(--latin);font-style:italic;min-width:20px">火</span>
+        <div class="score-bar-wrap"><div class="score-bar" id="bar-fire" style="background:var(--fire);width:0%"></div></div>
+        <span class="score-num" id="num-fire">0/5</span>
+      </div>
+    </div>
+
+    <!-- 土 脾 -->
+    <div class="element-block" id="block-earth">
+      <div class="element-header">
+        <div class="element-dot" style="background:var(--earth)"></div>
+        <span class="element-kanji" style="color:var(--earth)">土</span>
+        <div class="element-info">
+          <h3>脾のエネルギー｜情報処理・思考の混乱・消化</h3>
+          <p>Spleen Energy · Earth Element · Late Summer</p>
+        </div>
+      </div>
+      <ul class="questions" id="q-earth">
+        <li class="q-item" onclick="toggle(this,&#39;earth&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">考えがまとまらない。頭の中がいつもごちゃごちゃしている</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;earth&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">片付けや整理整頓が極端に苦手で、どこから手をつければいいかわからない</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;earth&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">食欲が不安定（食べすぎてしまう、または全く食べられない）</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;earth&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">慢性的な疲れとだるさがあり、何をしても回復しない気がする</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;earth&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">複数のことを同時に処理しようとするとパニックになる</p></li>
+      </ul>
+      <div class="element-score">
+        <span style="font-size:.72rem;color:rgba(240,232,222,.3);font-family:var(--latin);font-style:italic;min-width:20px">土</span>
+        <div class="score-bar-wrap"><div class="score-bar" id="bar-earth" style="background:var(--earth);width:0%"></div></div>
+        <span class="score-num" id="num-earth">0/5</span>
+      </div>
+    </div>
+
+    <!-- 金 肺 -->
+    <div class="element-block" id="block-metal">
+      <div class="element-header">
+        <div class="element-dot" style="background:var(--metal)"></div>
+        <span class="element-kanji" style="color:var(--metal)">金</span>
+        <div class="element-info">
+          <h3>肺のエネルギー｜自己否定・悲しみ・ルーティン</h3>
+          <p>Lung Energy · Metal Element · Autumn</p>
+        </div>
+      </div>
+      <ul class="questions" id="q-metal">
+        <li class="q-item" onclick="toggle(this,&#39;metal&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">「できない自分」「だらしない自分」への自己否定が止まらない</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;metal&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">ルーティンや習慣がどうしても続かない</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;metal&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">皮膚の乾燥・アレルギー・花粉症など呼吸器系のトラブルがある</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;metal&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">悲しみや後悔の感情が長期間引きずり、なかなか手放せない</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;metal&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">「迷惑をかけてしまった」という罪悪感が慢性的にある</p></li>
+      </ul>
+      <div class="element-score">
+        <span style="font-size:.72rem;color:rgba(240,232,222,.3);font-family:var(--latin);font-style:italic;min-width:20px">金</span>
+        <div class="score-bar-wrap"><div class="score-bar" id="bar-metal" style="background:var(--metal);width:0%"></div></div>
+        <span class="score-num" id="num-metal">0/5</span>
+      </div>
+    </div>
+
+    <!-- 水 腎 -->
+    <div class="element-block" id="block-water">
+      <div class="element-header">
+        <div class="element-dot" style="background:var(--water)"></div>
+        <span class="element-kanji" style="color:var(--water)">水</span>
+        <div class="element-info">
+          <h3>腎のエネルギー｜記憶・集中力・意志力・恐れ</h3>
+          <p>Kidney Energy · Water Element · Winter</p>
+        </div>
+      </div>
+      <ul class="questions" id="q-water">
+        <li class="q-item" onclick="toggle(this,&#39;water&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">記憶力が低下している。読んだこと・聞いたことがすぐ消える</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;water&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">意志力が続かない。「今日こそ」と思っても3日で終わる</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;water&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">腰・膝の違和感や慢性的なだるさ、耳鳴りがある</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;water&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">慢性的な恐れや不安が根底にある。失敗するのが怖くて動けない</p></li>
+        <li class="q-item" onclick="toggle(this,&#39;water&#39;)"><div class="q-check"><div class="q-check-inner"></div></div><p class="q-text">夜になると不安が強まり、明日のことを考えると眠れなくなる</p></li>
+      </ul>
+      <div class="element-score">
+        <span style="font-size:.72rem;color:rgba(240,232,222,.3);font-family:var(--latin);font-style:italic;min-width:20px">水</span>
+        <div class="score-bar-wrap"><div class="score-bar" id="bar-water" style="background:var(--water);width:0%"></div></div>
+        <span class="score-num" id="num-water">0/5</span>
+      </div>
+    </div>
+
+    <div class="text-center mt3">
+      <button class="hero-cta-btn" onclick="showResult()"><span>診断結果を見る</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESULT ── -->
+<section class="result-section light-dark" id="result-section">
+  <div class="container">
+    <p class="sec-label">your pattern</p>
+    <h2 class="sec-title" id="result-title">あなたの<span class="gold">五行パターン</span></h2>
+
+    <!-- Energy map -->
+    <div class="energy-map mt3" id="energy-map">
+      <div class="energy-col">
+        <div class="energy-label" style="color:var(--wood)">木</div>
+        <div class="energy-organ">肝 · Liver</div>
+        <div class="energy-bar-container">
+          <div class="energy-bar-bg"></div>
+          <div class="energy-bar-fill" id="ebar-wood" style="background:var(--wood)"></div>
+        </div>
+        <div class="energy-status" id="estat-wood">—</div>
+      </div>
+      <div class="energy-col">
+        <div class="energy-label" style="color:var(--fire)">火</div>
+        <div class="energy-organ">心 · Heart</div>
+        <div class="energy-bar-container">
+          <div class="energy-bar-bg"></div>
+          <div class="energy-bar-fill" id="ebar-fire" style="background:var(--fire)"></div>
+        </div>
+        <div class="energy-status" id="estat-fire">—</div>
+      </div>
+      <div class="energy-col">
+        <div class="energy-label" style="color:var(--earth)">土</div>
+        <div class="energy-organ">脾 · Spleen</div>
+        <div class="energy-bar-container">
+          <div class="energy-bar-bg"></div>
+          <div class="energy-bar-fill" id="ebar-earth" style="background:var(--earth)"></div>
+        </div>
+        <div class="energy-status" id="estat-earth">—</div>
+      </div>
+      <div class="energy-col">
+        <div class="energy-label" style="color:var(--metal)">金</div>
+        <div class="energy-organ">肺 · Lung</div>
+        <div class="energy-bar-container">
+          <div class="energy-bar-bg"></div>
+          <div class="energy-bar-fill" id="ebar-metal" style="background:var(--metal)"></div>
+        </div>
+        <div class="energy-status" id="estat-metal">—</div>
+      </div>
+      <div class="energy-col">
+        <div class="energy-label" style="color:var(--water)">水</div>
+        <div class="energy-organ">腎 · Kidney</div>
+        <div class="energy-bar-container">
+          <div class="energy-bar-bg"></div>
+          <div class="energy-bar-fill" id="ebar-water" style="background:var(--water)"></div>
+        </div>
+        <div class="energy-status" id="estat-water">—</div>
+      </div>
+    </div>
+
+    <div class="result-cards mt3" id="result-cards"></div>
+  </div>
+</section>
+
+<!-- ── FLOWCHART ── -->
+<section class="section dark" id="flowchart">
+  <div class="container">
+    <p class="sec-label">flowchart</p>
+    <h2 class="sec-title">ADHD症状から<span class="gold">整えるまでの流れ</span></h2>
+    <p class="sec-lead">五行パターンの特定から、食処方・感情ワーク・星読みケアまでの全体像です。</p>
+    <div class="flowchart-wrap">
+      <svg class="flow-svg" viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" style="font-family:&#39;Shippori Mincho&#39;,serif">
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="rgba(184,146,74,.6)"></path>
+          </marker>
+        </defs>
+        <!-- TOP: ADHD症状 -->
+        <rect x="280" y="20" width="200" height="50" fill="none" stroke="rgba(184,146,74,.5)" stroke-width="1"></rect>
+        <text x="380" y="40" text-anchor="middle" fill="#d4aa6a" font-size="13" font-family="&#39;Shippori Mincho&#39;,serif">ADHD症状の出現</text>
+        <text x="380" y="57" text-anchor="middle" fill="rgba(240,232,222,.4)" font-size="10">衝動性・注意散漫・感情の波</text>
+
+        <!-- Arrow down -->
+        <line x1="380" y1="70" x2="380" y2="110" stroke="rgba(184,146,74,.4)" stroke-width="1" marker-end="url(#arr)"></line>
+
+        <!-- 五行診断 -->
+        <rect x="260" y="110" width="240" height="50" fill="rgba(184,146,74,.08)" stroke="rgba(184,146,74,.4)" stroke-width="1"></rect>
+        <text x="380" y="131" text-anchor="middle" fill="#e8c87a" font-size="13">五行自己診断シート</text>
+        <text x="380" y="148" text-anchor="middle" fill="rgba(240,232,222,.4)" font-size="10">25問で五臓のパターンを特定</text>
+
+        <!-- Arrow to 5 branches -->
+        <line x1="380" y1="160" x2="380" y2="190" stroke="rgba(184,146,74,.4)" stroke-width="1"></line>
+        <!-- Branch lines -->
+        <line x1="80" y1="190" x2="680" y2="190" stroke="rgba(184,146,74,.25)" stroke-width="1"></line>
+        <line x1="80" y1="190" x2="80" y2="220" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="230" y1="190" x2="230" y2="220" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="380" y1="190" x2="380" y2="220" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="530" y1="190" x2="530" y2="220" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="680" y1="190" x2="680" y2="220" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+
+        <!-- 5 element boxes -->
+        <rect x="25" y="220" width="110" height="70" fill="rgba(74,124,89,.12)" stroke="rgba(74,124,89,.4)" stroke-width="1"></rect>
+        <text x="80" y="248" text-anchor="middle" fill="#6ab87a" font-size="14" font-weight="600">木/肝</text>
+        <text x="80" y="264" text-anchor="middle" fill="rgba(240,232,222,.45)" font-size="9.5">衝動性・怒り</text>
+        <text x="80" y="278" text-anchor="middle" fill="rgba(240,232,222,.35)" font-size="9">計画・実行の困難</text>
+
+        <rect x="175" y="220" width="110" height="70" fill="rgba(192,57,43,.12)" stroke="rgba(192,57,43,.4)" stroke-width="1"></rect>
+        <text x="230" y="248" text-anchor="middle" fill="#e07060" font-size="14" font-weight="600">火/心</text>
+        <text x="230" y="264" text-anchor="middle" fill="rgba(240,232,222,.45)" font-size="9.5">注意散漫・不眠</text>
+        <text x="230" y="278" text-anchor="middle" fill="rgba(240,232,222,.35)" font-size="9">感情の波・多弁</text>
+
+        <rect x="325" y="220" width="110" height="70" fill="rgba(201,125,42,.12)" stroke="rgba(201,125,42,.4)" stroke-width="1"></rect>
+        <text x="380" y="248" text-anchor="middle" fill="#e09050" font-size="14" font-weight="600">土/脾</text>
+        <text x="380" y="264" text-anchor="middle" fill="rgba(240,232,222,.45)" font-size="9.5">思考の混乱</text>
+        <text x="380" y="278" text-anchor="middle" fill="rgba(240,232,222,.35)" font-size="9">先延ばし・整理不能</text>
+
+        <rect x="475" y="220" width="110" height="70" fill="rgba(122,143,166,.12)" stroke="rgba(122,143,166,.4)" stroke-width="1"></rect>
+        <text x="530" y="248" text-anchor="middle" fill="#9ab0c6" font-size="14" font-weight="600">金/肺</text>
+        <text x="530" y="264" text-anchor="middle" fill="rgba(240,232,222,.45)" font-size="9.5">自己否定・悲しみ</text>
+        <text x="530" y="278" text-anchor="middle" fill="rgba(240,232,222,.35)" font-size="9">ルーティン困難</text>
+
+        <rect x="625" y="220" width="110" height="70" fill="rgba(44,95,138,.12)" stroke="rgba(44,95,138,.4)" stroke-width="1"></rect>
+        <text x="680" y="248" text-anchor="middle" fill="#6090c8" font-size="14" font-weight="600">水/腎</text>
+        <text x="680" y="264" text-anchor="middle" fill="rgba(240,232,222,.45)" font-size="9.5">記憶・意志力低下</text>
+        <text x="680" y="278" text-anchor="middle" fill="rgba(240,232,222,.35)" font-size="9">慢性的な恐れ</text>
+
+        <!-- 過不足 判断 -->
+        <line x1="80" y1="290" x2="80" y2="330" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="230" y1="290" x2="230" y2="330" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="380" y1="290" x2="380" y2="330" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="530" y1="290" x2="530" y2="330" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="680" y1="290" x2="680" y2="330" stroke="rgba(184,146,74,.25)" stroke-width="1" marker-end="url(#arr)"></line>
+
+        <!-- 過不足 labels -->
+        <text x="80" y="326" text-anchor="middle" fill="#e85d5d" font-size="9.5" font-family="&#39;Shippori Mincho&#39;,serif">過剰→疏通・清熱</text>
+        <text x="230" y="326" text-anchor="middle" fill="#6db3f2" font-size="9.5" font-family="&#39;Shippori Mincho&#39;,serif">不足→補益・養心</text>
+        <text x="380" y="326" text-anchor="middle" fill="#e09050" font-size="9.5" font-family="&#39;Shippori Mincho&#39;,serif">湿痰→化湿・理気</text>
+        <text x="530" y="326" text-anchor="middle" fill="#9ab0c6" font-size="9.5" font-family="&#39;Shippori Mincho&#39;,serif">気虚→補肺・潤肺</text>
+        <text x="680" y="326" text-anchor="middle" fill="#6090c8" font-size="9.5" font-family="&#39;Shippori Mincho&#39;,serif">精不足→補腎・填精</text>
+
+        <!-- converge -->
+        <line x1="80" y1="335" x2="80" y2="360" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="230" y1="335" x2="230" y2="360" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="380" y1="335" x2="380" y2="360" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="530" y1="335" x2="530" y2="360" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="680" y1="335" x2="680" y2="360" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="80" y1="360" x2="680" y2="360" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="380" y1="360" x2="380" y2="390" stroke="rgba(184,146,74,.3)" stroke-width="1" marker-end="url(#arr)"></line>
+
+        <!-- 3 outputs -->
+        <rect x="60" y="390" width="160" height="55" fill="rgba(184,146,74,.07)" stroke="rgba(184,146,74,.3)" stroke-width="1"></rect>
+        <text x="140" y="412" text-anchor="middle" fill="#d4aa6a" font-size="11">薬膳食処方</text>
+        <text x="140" y="428" text-anchor="middle" fill="rgba(240,232,222,.4)" font-size="9">パターン別の食材リスト</text>
+        <text x="140" y="440" text-anchor="middle" fill="rgba(240,232,222,.35)" font-size="9">毎日の食卓で実践</text>
+
+        <rect x="300" y="390" width="160" height="55" fill="rgba(184,146,74,.07)" stroke="rgba(184,146,74,.3)" stroke-width="1"></rect>
+        <text x="380" y="412" text-anchor="middle" fill="#d4aa6a" font-size="11">感情ワーク</text>
+        <text x="380" y="428" text-anchor="middle" fill="rgba(240,232,222,.4)" font-size="9">根源感情と今の感情を仕分け</text>
+        <text x="380" y="440" text-anchor="middle" fill="rgba(240,232,222,.35)" font-size="9">感情の輪で可視化</text>
+
+        <rect x="540" y="390" width="160" height="55" fill="rgba(184,146,74,.07)" stroke="rgba(184,146,74,.3)" stroke-width="1"></rect>
+        <text x="620" y="412" text-anchor="middle" fill="#d4aa6a" font-size="11">星読みケア</text>
+        <text x="620" y="428" text-anchor="middle" fill="rgba(240,232,222,.4)" font-size="9">天王星・水星の読み解き</text>
+        <text x="620" y="440" text-anchor="middle" fill="rgba(240,232,222,.35)" font-size="9">宇宙的な意味の理解</text>
+
+        <!-- lines to outputs -->
+        <line x1="300" y1="360" x2="140" y2="390" stroke="rgba(184,146,74,.2)" stroke-width="1" marker-end="url(#arr)"></line>
+        <line x1="460" y1="360" x2="620" y2="390" stroke="rgba(184,146,74,.2)" stroke-width="1" marker-end="url(#arr)"></line>
+
+        <!-- Final -->
+        <line x1="140" y1="445" x2="140" y2="475" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="380" y1="445" x2="380" y2="475" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="620" y1="445" x2="620" y2="475" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="140" y1="475" x2="620" y2="475" stroke="rgba(184,146,74,.2)" stroke-width="1"></line>
+        <line x1="380" y1="475" x2="380" y2="500" stroke="rgba(184,146,74,.35)" stroke-width="1" marker-end="url(#arr)"></line>
+
+        <text x="380" y="517" text-anchor="middle" fill="#d4aa6a" font-size="12" font-family="&#39;Shippori Mincho&#39;,serif">エネルギーが整い、自走できる自分へ</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOD RX ── -->
+<section class="section mid" id="foodrx">
+  <div class="container">
+    <p class="sec-label">medicinal food prescription</p>
+    <h2 class="sec-title">ADHD別<span class="gold">薬膳食処方</span></h2>
+    <p class="sec-lead">五行パターン別に、日常の食事で取り入れられる薬膳処方を紹介します。スーパーで手に入る食材が中心です。</p>
+
+    <div class="rx-tabs mt3">
+      <button class="rx-tab active" onclick="switchTab(this,&#39;rx-wood&#39;)">木/肝｜衝動性</button>
+      <button class="rx-tab" onclick="switchTab(this,&#39;rx-fire&#39;)">火/心｜注意散漫</button>
+      <button class="rx-tab" onclick="switchTab(this,&#39;rx-earth&#39;)">土/脾｜思考混乱</button>
+      <button class="rx-tab" onclick="switchTab(this,&#39;rx-metal&#39;)">金/肺｜自己否定</button>
+      <button class="rx-tab" onclick="switchTab(this,&#39;rx-water&#39;)">水/腎｜集中力</button>
+    </div>
+
+    <!-- 木 -->
+    <div class="rx-panel active" id="rx-wood">
+      <div class="rx-grid">
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--wood);border-color:var(--wood)">疏肝理気</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">衝動性・怒りを流す</span>
+          </div>
+          <p class="rx-card-title">肝気の詰まりを解く食材</p>
+          <p class="rx-card-tcm">「怒は気を上らせる」— 肝は感情の疏通を主る</p>
+          <p class="rx-card-body">衝動性や感情爆発は、肝気が詰まって上逆しているサイン。気を横に流し、上昇を抑える食材で怒りのエネルギーを整えます。</p>
+          <div class="rx-foods">
+            <span class="rx-food">セロリ</span><span class="rx-food">パクチー</span><span class="rx-food">春菊</span><span class="rx-food">三つ葉</span><span class="rx-food">薄荷茶</span>
+          </div>
+          <p class="rx-timing">食べ方：朝食に生で、または昼に炒め物に加える</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--wood);border-color:var(--wood)">平肝潜陽</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">亢進した肝を落ち着かせる</span>
+          </div>
+          <p class="rx-card-title">過剰な肝の熱を冷ます食材</p>
+          <p class="rx-card-tcm">肝陽上亢 — 頭に熱が上り、衝動的になる状態</p>
+          <p class="rx-card-body">頭痛を伴う怒りや、カッとなってすぐに言葉が出てしまう場合は、肝に熱がこもっています。苦味・酸味で冷ましましょう。</p>
+          <div class="rx-foods">
+            <span class="rx-food">菊花茶</span><span class="rx-food">梅干し</span><span class="rx-food">酢</span><span class="rx-food">グレープフルーツ</span><span class="rx-food">緑茶</span>
+          </div>
+          <p class="rx-timing">食べ方：感情が高ぶる前の夕方に菊花茶を1杯</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--wood);border-color:var(--wood)">養肝血</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">肝血を補い目を養う</span>
+          </div>
+          <p class="rx-card-title">肝血を補い、計画力を取り戻す</p>
+          <p class="rx-card-tcm">肝血虚 — 血が不足し、決断力・実行力が落ちる</p>
+          <p class="rx-card-body">計画を立てても動けない場合は、肝血が不足している可能性があります。肝血を補う食材で実行力を底上げしましょう。</p>
+          <div class="rx-foods">
+            <span class="rx-food">ほうれん草</span><span class="rx-food">レバー</span><span class="rx-food">プルーン</span><span class="rx-food">ぶどう</span><span class="rx-food">人参</span>
+          </div>
+          <p class="rx-timing">食べ方：夜の食事に鉄分・葉酸の多い食材を意識的に</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 火 -->
+    <div class="rx-panel" id="rx-fire">
+      <div class="rx-grid">
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--fire);border-color:var(--fire)">養心安神</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">心を養い精神を安定させる</span>
+          </div>
+          <p class="rx-card-title">心神を安定させ、注意力を整える</p>
+          <p class="rx-card-tcm">心主神志 — 心は意識・精神活動の中枢</p>
+          <p class="rx-card-body">注意散漫・感情の浮き沈みは、心神が揺らいでいるサイン。心を落ち着かせる甘味・苦味の食材でフォーカスを戻します。</p>
+          <div class="rx-foods">
+            <span class="rx-food">なつめ</span><span class="rx-food">百合根</span><span class="rx-food">蓮の実</span><span class="rx-food">牡蠣</span><span class="rx-food">小麦</span>
+          </div>
+          <p class="rx-timing">食べ方：なつめ5粒をお湯で煮出してお茶として毎日</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--fire);border-color:var(--fire)">清心火</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">心の熱を清す</span>
+          </div>
+          <p class="rx-card-title">過集中・多動の熱を鎮める</p>
+          <p class="rx-card-tcm">心火亢盛 — 心に熱がこもり落ち着けない状態</p>
+          <p class="rx-card-body">じっとしていられない、頭が止まらない、眠れないのは心火が旺盛すぎるサイン。苦味で心の熱を清しましょう。</p>
+          <div class="rx-foods">
+            <span class="rx-food">竹の子</span><span class="rx-food">蓮根</span><span class="rx-food">ゴーヤ</span><span class="rx-food">緑豆</span><span class="rx-food">麦茶</span>
+          </div>
+          <p class="rx-timing">食べ方：昼食後に麦茶、夕食に蓮根や緑豆を使った一品</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--fire);border-color:var(--fire)">補心血</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">心血を補い記憶力を上げる</span>
+          </div>
+          <p class="rx-card-title">心血を補い、忘れ物・集中力を改善</p>
+          <p class="rx-card-tcm">心血虚 — 血が足りず、心が栄養不足になる</p>
+          <p class="rx-card-body">すぐ忘れる、話が頭に入ってこない場合は心血の不足を疑います。血を補う食材で脳と心を同時に養います。</p>
+          <div class="rx-foods">
+            <span class="rx-food">竜眼肉</span><span class="rx-food">ほうれん草</span><span class="rx-food">いか</span><span class="rx-food">たこ</span><span class="rx-food">赤身肉</span>
+          </div>
+          <p class="rx-timing">食べ方：週3回以上、血を補う食材を夕食に意識して</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 土 -->
+    <div class="rx-panel" id="rx-earth">
+      <div class="rx-grid">
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--earth);border-color:var(--earth)">健脾化湿</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">脾を健やかにし湿を除く</span>
+          </div>
+          <p class="rx-card-title">頭の霧と思考の混乱を晴らす</p>
+          <p class="rx-card-tcm">脾虚痰湿 — 脾が弱り湿がたまり思考が濁る</p>
+          <p class="rx-card-body">頭がぼーっとする・考えがまとまらない・片付けられないのは、脾が弱り「湿」が溜まっているサイン。消化を助け、余分な水分を除く食材を。</p>
+          <div class="rx-foods">
+            <span class="rx-food">山芋</span><span class="rx-food">かぼちゃ</span><span class="rx-food">とうもろこし</span><span class="rx-food">はと麦</span><span class="rx-food">生姜</span>
+          </div>
+          <p class="rx-timing">食べ方：毎朝、山芋と生姜入りのおかゆで脾を温める</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--earth);border-color:var(--earth)">益気補脾</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">気を益し脾を補う</span>
+          </div>
+          <p class="rx-card-title">慢性的な疲れと食欲不安定を整える</p>
+          <p class="rx-card-tcm">脾気虚 — 脾の機能が低下し、気の生産が減少</p>
+          <p class="rx-card-body">いくら寝ても疲れが取れない、食欲が安定しないのは脾気虚のサイン。気を補う甘味の食材で根本から立て直します。</p>
+          <div class="rx-foods">
+            <span class="rx-food">さつまいも</span><span class="rx-food">米</span><span class="rx-food">栗</span><span class="rx-food">大豆</span><span class="rx-food">じゃがいも</span>
+          </div>
+          <p class="rx-timing">食べ方：お米をしっかり食べる。さつまいもをおやつに</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--earth);border-color:var(--earth)">理気和胃</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">気を調え胃を整える</span>
+          </div>
+          <p class="rx-card-title">先延ばしグセと行動できない状態を改善</p>
+          <p class="rx-card-tcm">肝脾不和 — 肝が脾を「克」し、行動の滞り</p>
+          <p class="rx-card-body">「やらなきゃ」と思うのに体が動かない状態は、肝のストレスが脾を攻撃しているパターン。消化器を整え、行動のエネルギーを生産します。</p>
+          <div class="rx-foods">
+            <span class="rx-food">陳皮（みかんの皮）</span><span class="rx-food">大根</span><span class="rx-food">らっきょう</span><span class="rx-food">紫蘇</span><span class="rx-food">酢</span>
+          </div>
+          <p class="rx-timing">食べ方：食後にみかんの皮を乾燥させたお茶（陳皮茶）</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 金 -->
+    <div class="rx-panel" id="rx-metal">
+      <div class="rx-grid">
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--metal);border-color:var(--metal)">補肺益気</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">肺気を補い免疫力を上げる</span>
+          </div>
+          <p class="rx-card-title">自己否定と悲しみを和らげる</p>
+          <p class="rx-card-tcm">「悲は気を消す」— 悲しみが肺気を消耗させる</p>
+          <p class="rx-card-body">自己否定・後悔・悲しみが続くと肺が消耗します。肺を潤し気を補う食材で、内側から立ち上がる力を取り戻します。</p>
+          <div class="rx-foods">
+            <span class="rx-food">白きくらげ</span><span class="rx-food">梨</span><span class="rx-food">白ごま</span><span class="rx-food">松の実</span><span class="rx-food">豆腐</span>
+          </div>
+          <p class="rx-timing">食べ方：白きくらげのデザートを週2〜3回。梨をそのまま</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--metal);border-color:var(--metal)">潤肺止咳</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">肺を潤し乾燥を防ぐ</span>
+          </div>
+          <p class="rx-card-title">皮膚の乾燥・アレルギーと感情をセットで整える</p>
+          <p class="rx-card-tcm">肺主皮毛 — 肺は皮膚・体毛を主る</p>
+          <p class="rx-card-body">皮膚の乾燥・アレルギー・乾いた咳は肺の不調のサイン。肺を潤す食材は、同時に感情の乾燥（過度の自己批判）も潤します。</p>
+          <div class="rx-foods">
+            <span class="rx-food">はちみつ</span><span class="rx-food">山芋</span><span class="rx-food">百合根</span><span class="rx-food">アーモンド</span><span class="rx-food">春菊</span>
+          </div>
+          <p class="rx-timing">食べ方：寝る前にはちみつレモン湯。秋冬は特に意識して</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--metal);border-color:var(--metal)">培土生金</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">脾（土）を育て肺（金）を生む</span>
+          </div>
+          <p class="rx-card-title">ルーティンが続かない問題を根本から</p>
+          <p class="rx-card-tcm">相生の関係：土は金を生む</p>
+          <p class="rx-card-body">ルーティンが続かない場合、肺だけでなく脾も同時に弱っていることがほとんど。消化器（土）を整えることで、肺（金）のエネルギーを底上げします。</p>
+          <div class="rx-foods">
+            <span class="rx-food">米・もち米</span><span class="rx-food">かぼちゃ</span><span class="rx-food">長芋</span><span class="rx-food">白菜</span><span class="rx-food">豆乳</span>
+          </div>
+          <p class="rx-timing">食べ方：朝に温かいものを食べることをまず習慣にする</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 水 -->
+    <div class="rx-panel" id="rx-water">
+      <div class="rx-grid">
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--water);border-color:var(--water)">補腎填精</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">腎を補い精を充填する</span>
+          </div>
+          <p class="rx-card-title">集中力・記憶力・意志力の根本を強化</p>
+          <p class="rx-card-tcm">腎は先天の精を蔵す — 脳の働きの根本は腎精</p>
+          <p class="rx-card-body">ADHDの集中力低下・記憶力の問題の多くは、腎精の不足が根本にあります。腎を補う黒い食材で脳の基盤を整えます。</p>
+          <div class="rx-foods">
+            <span class="rx-food">黒豆</span><span class="rx-food">黒ごま</span><span class="rx-food">クルミ</span><span class="rx-food">牡蠣</span><span class="rx-food">黒米</span>
+          </div>
+          <p class="rx-timing">食べ方：黒豆10粒＋クルミ3粒を毎朝。継続が最重要</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--water);border-color:var(--water)">滋腎潜陽</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">腎陰を滋し陽を潜らせる</span>
+          </div>
+          <p class="rx-card-title">夜の不安・眠れない・過集中後の回復</p>
+          <p class="rx-card-tcm">腎陰虚 — 陰液が不足し、夜間に症状が強まる</p>
+          <p class="rx-card-body">夜になると不安が強まる、過集中の後に虚脱する場合は腎陰が不足しています。陰を補い、上昇したエネルギーを引き下げます。</p>
+          <div class="rx-foods">
+            <span class="rx-food">山芋</span><span class="rx-food">枸杞（クコの実）</span><span class="rx-food">豆腐</span><span class="rx-food">アスパラ</span><span class="rx-food">鴨肉</span>
+          </div>
+          <p class="rx-timing">食べ方：夕食後にクコの実を5〜10粒。夜の間食をやめる</p>
+        </div>
+        <div class="rx-card">
+          <div class="rx-head">
+            <span class="rx-badge" style="color:var(--water);border-color:var(--water)">温補腎陽</span>
+            <span style="font-size:.7rem;color:rgba(240,232,222,.3);font-style:italic">腎陽を温め意志力を高める</span>
+          </div>
+          <p class="rx-card-title">意志力・モチベーションが続かない問題へ</p>
+          <p class="rx-card-tcm">腎陽虚 — 命門火が弱まり、やる気の根本が枯れる</p>
+          <p class="rx-card-body">3日坊主、意志力が続かない、冬に特に悪化する場合は腎陽（命門火）の不足を疑います。体を温め、内側から火を燃やす食材を。</p>
+          <div class="rx-foods">
+            <span class="rx-food">にら</span><span class="rx-food">えび</span><span class="rx-food">シナモン</span><span class="rx-food">羊肉</span><span class="rx-food">くるみ</span>
+          </div>
+          <p class="rx-timing">食べ方：冬はシナモン紅茶を毎朝。体を冷やす食べ物を避ける</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ASTROLOGY ── -->
+<section class="section dark" id="astro">
+  <div class="container">
+    <p class="sec-label">medical astrology</p>
+    <h2 class="sec-title">星読みで読み解く<span class="gold">ADHDの意味</span></h2>
+    <p class="sec-lead">医療占星術では、生まれた時の星の配置からADHDの特性の「なぜ」を読み解きます。あなたの特性は「欠陥」ではなく、宇宙があなたに与えた特別な設計です。</p>
+    <div class="astro-grid">
+      <div class="astro-card">
+        <div class="astro-planet">♅</div>
+        <h3 class="astro-name">天王星｜Uranus</h3>
+        <p class="astro-sub">革新・独創性・神経系・突然の変化</p>
+        <p class="astro-body">天王星はADHDと最も深く関連する惑星です。天王星が強調されたチャート（1ハウス・10ハウス・アセンダント合や、水星・月とのアスペクト）を持つ人は、神経系が通常より高感度に配線されています。これは「障害」ではなく、時代の変革者・革命家の資質を宿しているサインです。</p>
+        <div class="astro-signs mt1">
+          <span class="astro-sign">水瓶座☌</span><span class="astro-sign">牡羊座☌</span><span class="astro-sign">天王星0度</span><span class="astro-sign">天王星90度</span>
+        </div>
+      </div>
+      <div class="astro-card">
+        <div class="astro-planet">☿</div>
+        <h3 class="astro-name">水星｜Mercury</h3>
+        <p class="astro-sub">思考・コミュニケーション・神経伝達・情報処理</p>
+        <p class="astro-body">水星はADHDの認知特性と直結します。水星が魚座・射手座にある場合、情報処理が直感的・非線形になりやすく、学校的な「順序通り」の思考と摩擦が生じやすい。水星逆行生まれの人は、内側で処理してから話す傾向があり「反応が遅い」と誤解されがちですが、実は深い思考者です。</p>
+        <div class="astro-signs mt1">
+          <span class="astro-sign">水星Rx生まれ</span><span class="astro-sign">魚座♃</span><span class="astro-sign">天王星☌水星</span>
+        </div>
+      </div>
+      <div class="astro-card">
+        <div class="astro-planet">☽</div>
+        <h3 class="astro-name">月｜Moon</h3>
+        <p class="astro-sub">感情・本能・子ども期の記憶・感受性</p>
+        <p class="astro-body">月のサインはADHDの感情的な側面を読み解く鍵です。月が双子座・射手座にある人は情報への渇望が強く、注意が次々と移りやすい。月が天王星と強いアスペクトを持つ場合、感情の変化が電撃的で周囲に驚かれやすいですが、その感性は鋭い直感力として活用できます。</p>
+        <div class="astro-signs mt1">
+          <span class="astro-sign">月☌天王星</span><span class="astro-sign">双子座月</span><span class="astro-sign">射手座月</span><span class="astro-sign">牡羊座月</span>
+        </div>
+      </div>
+      <div class="astro-card">
+        <div class="astro-planet">♃</div>
+        <h3 class="astro-name">木星｜Jupiter</h3>
+        <p class="astro-sub">拡大・過剰・熱中・興味の爆発</p>
+        <p class="astro-body">木星が強調されたチャートでは、ADHDの「過集中」や「興味の爆発」が特に顕著になります。木星は「もっと・もっと」と拡大する性質を持ち、興味があることへの集中力は天才的な一方、興味が切れると完全にシャットダウンします。木星を理解することで、自分の「エネルギーの波」と上手に付き合えます。</p>
+        <div class="astro-signs mt1">
+          <span class="astro-sign">木星☌水星</span><span class="astro-sign">木星1H</span><span class="astro-sign">射手座木星</span>
+        </div>
+      </div>
+      <div class="astro-card">
+        <div class="astro-planet">⊙</div>
+        <h3 class="astro-name">ADHDになりやすい星座配置</h3>
+        <p class="astro-sub">Statistical tendencies · 傾向としての参考</p>
+        <p class="astro-body">双子座（情報処理の多さ）、射手座（衝動的な行動・大局思考）、水瓶座（独創的な神経系）、牡羊座（衝動性・即断即決）は、ADHDの特性と共鳴しやすい配置です。ただし、これは「あなたがADHD」という診断ではなく、エネルギーの傾向を読む手がかりです。星図全体を複合的に読む必要があります。</p>
+        <div class="astro-signs mt1">
+          <span class="astro-sign">双子座</span><span class="astro-sign">射手座</span><span class="astro-sign">水瓶座</span><span class="astro-sign">牡羊座</span>
+        </div>
+      </div>
+      <div class="astro-card">
+        <div class="astro-planet">☿Rx</div>
+        <h3 class="astro-name">水星逆行期のケア</h3>
+        <p class="astro-sub">Mercury Retrograde · ADHDが強まる時期</p>
+        <p class="astro-body">水星逆行期は、ADHDの特性が強まりやすい時期です。コミュニケーションのズレ、忘れ物の増加、決断の困難が起きやすくなります。この時期は「ミスが多い自分を責めない」を優先し、薬膳ケア（腎・心を補う食材）を強化するタイミングです。逆行は「内側を整える期間」として活用しましょう。</p>
+        <div class="astro-signs mt1">
+          <span class="astro-sign">年3回・各3週間</span><span class="astro-sign">補腎強化</span><span class="astro-sign">セルフケア期間</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EMOTION WORK ── -->
+<section class="section mid" id="emotion">
+  <div class="container">
+    <p class="sec-label">emotion wheel work</p>
+    <h2 class="sec-title">ADHD感情の<span class="gold">仕分けワーク</span></h2>
+    <p class="sec-lead">ADHDの感情爆発は「本当の気持ち」ではないことがほとんどです。感情の輪を使って「根源からくる感情」と「今の本当の感情」を仕分け、エネルギーの流れを変えましょう。</p>
+    <div class="emotion-blocks mt3">
+      <div class="emotion-block">
+        <p class="emotion-block-label">step 01</p>
+        <h3 class="emotion-block-title">感情に名前をつける</h3>
+        <p class="emotion-block-body">感情が動いた瞬間、まず「今何を感じているか」を感情の輪の52感情から探します。「怒り」ではなく「苛立ち」「憤怒」「激怒」のどれかを特定することで、強度と種類が明確になります。</p>
+        <ul class="emotion-steps">
+          <li>感情の輪を手元に置く（スマホで表示でもOK）</li>
+          <li>「今の感情」に最も近い言葉を3つ選ぶ</li>
+          <li>身体のどこでそれを感じているかを確認する</li>
+        </ul>
+      </div>
+      <div class="emotion-block">
+        <p class="emotion-block-label">step 02</p>
+        <h3 class="emotion-block-title">根源か、今かを仕分ける</h3>
+        <p class="emotion-block-body">特定した感情が「根源（カルマ・過去の傷）から来るものか」「今この瞬間の本当の気持ちか」を問いかけます。ADHDの反応的な感情の多くは、根源が引き金を引いています。</p>
+        <ul class="emotion-steps">
+          <li>「この感情は今だけのことか？昔も同じだったか？」と問う</li>
+          <li>「5歳の自分も同じ感情を感じたか？」を確認する</li>
+          <li>根源からの場合、「これは過去のパターンだ」と認識する</li>
+        </ul>
+      </div>
+      <div class="emotion-block">
+        <p class="emotion-block-label">step 03</p>
+        <h3 class="emotion-block-title">五臓にマッピングする</h3>
+        <p class="emotion-block-body">仕分けた感情が五臓のどこに関係するかを確認します。怒り系→肝、不安系→腎、悲しみ系→肺、思い悩み→脾、喜び・驚き→心。その日に強い感情の臓腑に対応した食材を夕食に意識して取り入れます。</p>
+        <ul class="emotion-steps">
+          <li>「今日の感情は何臓？」を毎晩寝る前に確認する</li>
+          <li>対応する食材を翌日の食事に取り入れる</li>
+          <li>1週間後に感情の強度の変化を確認する</li>
+        </ul>
+      </div>
+      <div class="emotion-block">
+        <p class="emotion-block-label">step 04</p>
+        <h3 class="emotion-block-title">ADHD特有の感情パターン</h3>
+        <p class="emotion-block-body">ADHDには特有の感情サイクルがあります。「過集中→虚脱→自己嫌悪→爆発→後悔→過集中」というループが典型的です。このパターンに気づくことが最初の変化のきっかけになります。</p>
+        <ul class="emotion-steps">
+          <li>自分のループのパターンを日記で観察する</li>
+          <li>「爆発の前に何が起きているか」を特定する</li>
+          <li>ループの入口（最初の引き金）に食処方を当てる</li>
+        </ul>
+      </div>
+      <div class="emotion-block">
+        <p class="emotion-block-label">step 05</p>
+        <h3 class="emotion-block-title">感情の輪×五行ワーク</h3>
+        <p class="emotion-block-body">感情の輪の8つの基本感情と五臓を組み合わせたワークです。毎日10分、今日一番強かった感情を感情の輪から選び、対応する臓腑を確認し、その臓腑の食材を翌日に食べる。これだけで、3ヶ月後には感情の波が変わり始めます。</p>
+        <ul class="emotion-steps">
+          <li>怒り系：肝→セロリ・梅干し・菊花茶</li>
+          <li>恐れ系：腎→黒豆・クルミ・クコの実</li>
+          <li>悲しみ系：肺→白きくらげ・梨・はちみつ</li>
+          <li>思い悩み系：脾→山芋・かぼちゃ・はと麦</li>
+          <li>過剰な喜び・驚き系：心→なつめ・蓮の実・百合根</li>
+        </ul>
+      </div>
+      <div class="emotion-block">
+        <p class="emotion-block-label">note</p>
+        <h3 class="emotion-block-title">ADHDと感情調節困難（RSD）</h3>
+        <p class="emotion-block-body">ADHDには「拒絶敏感性不快感（RSD）」という特性があります。些細な批判や拒絶に対して、極端に強い感情反応が起きる状態です。東洋医学では、これを「心腎の不交（心と腎のバランスの崩れ）」として読み解きます。心と腎を同時に養うことで、RSDの強度は和らげることができます。</p>
+        <ul class="emotion-steps">
+          <li>心腎両補：なつめ＋黒豆のお茶を毎日</li>
+          <li>感情が高ぶる前のサインを記録する</li>
+          <li>「これはRSDだ」と気づく練習を続ける</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="dark" style="padding:0">
+  <div class="cta-wrap">
+    <p class="sec-label" style="text-align:center;margin-bottom:1.5rem">take the next step</p>
+    <h2 class="cta-title">
+      あなたの五行パターンを<br>
+      碧野はなと一緒に読み解きませんか？
+    </h2>
+    <p class="cta-sub">
+      診断シートの結果＋ホロスコープ＋根源（カルマ）の3つを統合して、<br>
+      あなただけのADHD食処方×感情ワーク×星読みプランをお届けします。
+    </p>
+    <a href="https://forms.gle/S3dbB55BQ82ZiiRp9" target="_blank" class="cta-btn">無料相談を申し込む</a>
+  </div>
+  <div style="background:#0a0807;padding:2rem;text-align:center">
+    <p style="font-family:&#39;Cormorant Garamond&#39;,serif;font-style:italic;font-size:.75rem;color:rgba(240,232,222,.2);letter-spacing:.1em">© 2026 Re:Born Method · 碧野はな · 食とエネルギーで整えるエネルギー食療師</p>
+  </div>
+</section>
+
+</div><!-- /page -->
+
+<script>
+// NAV scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',scrollY>60);
+});
+
+// Scores
+const scores={wood:0,fire:0,earth:0,metal:0,water:0};
+
+function toggle(el,elem){
+  el.classList.toggle('checked');
+  scores[elem]=document.querySelectorAll('#q-'+elem+' .q-item.checked').length;
+  const pct=scores[elem]/5*100;
+  document.getElementById('bar-'+elem).style.width=pct+'%';
+  document.getElementById('num-'+elem).textContent=scores[elem]+'/5';
+}
+
+// Show Result
+function showResult(){
+  const rs=document.getElementById('result-section');
+  rs.classList.add('visible');
+  rs.scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>{
+    updateEnergyMap();
+    updateResultCards();
+  },400);
+}
+
+const ELEM_DATA={
+  wood:{label:'木/肝',color:'var(--wood)',organ:'肝（Liver）',
+    high:'肝気過亢進型',highDesc:'衝動性・感情爆発・計画の困難が主な特徴。気が上逆し、頭に熱がこもっています。疏通・清熱の食材と感情リリースワークが有効です。',
+    low:'肝血虚型',lowDesc:'実行力・決断力の低下。計画は立つのに動けない状態です。血を補う食材（ほうれん草・レバー・プルーン）で内側から立て直します。'},
+  fire:{label:'火/心',color:'var(--fire)',organ:'心（Heart）',
+    high:'心火亢盛型',highDesc:'多動・過集中・眠れない・多弁が特徴。心に熱がこもり、鎮めることができない状態です。苦味の食材で清熱を。',
+    low:'心血虚型',lowDesc:'注意散漫・忘れ物・感情の不安定さ。心が栄養不足になっています。竜眼肉・なつめ・百合根で心血を補います。'},
+  earth:{label:'土/脾',color:'var(--earth)',organ:'脾（Spleen）',
+    high:'痰湿困脾型',highDesc:'頭の霧・思考の混乱・片付けられないが主な特徴。湿が脾に蓄積し、エネルギーの流れを滞らせています。',
+    low:'脾気虚型',lowDesc:'慢性疲労・食欲不安定・行動できない状態。気の生産工場が止まっています。山芋・かぼちゃ・米で脾を立て直します。'},
+  metal:{label:'金/肺',color:'var(--metal)',organ:'肺（Lung）',
+    high:'肺気不宣型',highDesc:'ルーティンへの固執と破綻の繰り返し。気の流れが詰まり、新しいパターンを受け入れにくくなっています。',
+    low:'肺気虚型',lowDesc:'自己否定・悲しみが抜けない・免疫低下。悲しみが気を消耗させています。白きくらげ・梨・はちみつで潤します。'},
+  water:{label:'水/腎',color:'var(--water)',organ:'腎（Kidney）',
+    high:'腎陰虚型',highDesc:'夜の不安の強まり・過集中後の虚脱・耳鳴り。陰液の不足で虚熱が上昇しています。山芋・クコの実・豆腐で陰を補います。',
+    low:'腎陽虚型',lowDesc:'意志力が続かない・モチベーションの枯渇・冬に特に悪化。命門火が弱っています。にら・えび・シナモンで温めます。'},
+};
+
+function updateEnergyMap(){
+  const els=['wood','fire','earth','metal','water'];
+  const max=Math.max(...els.map(e=>scores[e]))||1;
+  els.forEach(e=>{
+    const s=scores[e];
+    const h=Math.max(8,(s/5)*100);
+    document.getElementById('ebar-'+e).style.height=h+'%';
+    const st=document.getElementById('estat-'+e);
+    if(s>=4){st.textContent='過剰 / Excess';st.className='energy-status excess'}
+    else if(s<=1){st.textContent='不足 / Deficient';st.className='energy-status deficient'}
+    else{st.textContent='中程度 / Mid';st.className='energy-status balanced'}
+  });
+}
+
+function updateResultCards(){
+  const els=['wood','fire','earth','metal','water'];
+  const sorted=[...els].sort((a,b)=>scores[b]-scores[a]);
+  const container=document.getElementById('result-cards');
+  container.innerHTML='';
+  sorted.slice(0,3).forEach((e,i)=>{
+    const d=ELEM_DATA[e];
+    const s=scores[e];
+    const isPrimary=i===0;
+    const type=s>=3?d.high:d.low;
+    const desc=s>=3?d.highDesc:d.lowDesc;
+    const card=document.createElement('div');
+    card.className='result-card'+(isPrimary?' primary':'');
+    card.innerHTML=`
+      ${isPrimary?'<span class="result-card-badge">主パターン</span>':''}
+      <p class="result-card-element">${d.label} · ${d.organ} · ${s}/5点</p>
+      <h3 class="result-card-title">${type}</h3>
+      <p class="result-card-body">${desc}</p>
+    `;
+    container.appendChild(card);
+  });
+
+  // Title
+  const primary=ELEM_DATA[sorted[0]];
+  document.getElementById('result-title').innerHTML=
+    `あなたの主パターン：<span class="gold">${ELEM_DATA[sorted[0]].high||ELEM_DATA[sorted[0]].low}</span>`;
+}
+
+// Food RX tabs
+function switchTab(btn,panelId){
+  document.querySelectorAll('.rx-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.rx-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+</script>
+
+
+</body></html>
